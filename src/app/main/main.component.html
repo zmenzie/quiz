@@ -1,0 +1,23 @@
+<div>
+    <h2>Simple Quiz</h2>
+</div>
+
+<br><br>
+
+<main role="main" class="container">
+    <div class="jumbotron">
+        <div *ngFor="let q of questionInfo">
+            <div class="container">
+                Question {{q.qid}}: {{q.question}}
+                <div *ngFor="let o of q.options">
+                    <label class="font-weight-normal">
+                        <input type="checkbox" (change)="answerSelected()" />
+                        {{o.text}}
+                    </label>
+                </div>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-primary" (click)="submit()">Submit Quiz</button>
+    </div>
+</main>

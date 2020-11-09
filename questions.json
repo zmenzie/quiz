@@ -1,0 +1,114 @@
+{
+    "questions": [
+        {
+            "qid": 1,
+            "question": "Which of the following is not a fruit?",
+            "options": [
+                {
+                    "text": "apple",
+                    "isAnswer": false
+                },
+                {
+                    "text": "banana",
+                    "isAnswer": false
+                },
+                {
+                    "text": "orange",
+                    "isAnswer": false
+                },
+                {
+                    "text": "carrot",
+                    "isAnswer": true
+                }
+            ]
+        },
+        {
+            "qid": 2,
+            "question": "The sun is what color?",
+            "options": [
+                {
+                    "text": "yellow",
+                    "isAnswer": true
+                },
+                {
+                    "text": "blue",
+                    "isAnswer": false
+                },
+                {
+                    "text": "red",
+                    "isAnswer": false
+                },
+                {
+                    "text": "green",
+                    "isAnswer": false
+                }
+            ]
+        },
+        {
+            "qid": 3,
+            "question": "Which of the following does not fit the group?",
+            "options": [
+                {
+                    "text": "truck",
+                    "isAnswer": false
+                },
+                {
+                    "text": "bus",
+                    "isAnswer": false
+                },
+                {
+                    "text": "bicycle",
+                    "isAnswer": true
+                },
+                {
+                    "text": "tractor",
+                    "isAnswer": false
+                }
+            ]
+        },
+        {
+            "qid": 4,
+            "question": "Leaves change color during which season?",
+            "options": [
+                {
+                    "text": "Winter",
+                    "isAnswer": false
+                },
+                {
+                    "text": "Spring",
+                    "isAnswer": false
+                },
+                {
+                    "text": "Summer",
+                    "isAnswer": false
+                },
+                {
+                    "text": "Fall",
+                    "isAnswer": true
+                }
+            ]
+        },
+        {
+            "qid": 5,
+            "question": "Which animal is tallest?",
+            "options": [
+                {
+                    "text": "Elephant",
+                    "isAnswer": false
+                },
+                {
+                    "text": "Bear",
+                    "isAnswer": false
+                },
+                {
+                    "text": "Gorilla",
+                    "isAnswer": false
+                },
+                {
+                    "text": "Giraffe",
+                    "isAnswer": true
+                }
+            ]
+        }
+    ]
+}
