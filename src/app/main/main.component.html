@@ -1,23 +1,101 @@
-<div>
-    <h2>Simple Quiz</h2>
+<div class="simple">
+    <h1>Simple Quiz</h1>
 </div>
 
 <br><br>
 
 <main role="main" class="container">
     <div class="jumbotron">
-        <div *ngFor="let q of questionInfo">
+        <div *ngIf="page=='quiz'">
             <div class="container">
-                Question {{q.qid}}: {{q.question}}
-                <div *ngFor="let o of q.options">
-                    <label class="font-weight-normal">
-                        <input type="checkbox" (change)="answerSelected()" />
-                        {{o.text}}
-                    </label>
-                </div>
+                <h5>Question {{this.i + 1}}: {{this.questionInfo[this.i].question}}</h5>
+                <hr>
+                <ul class="list-group" *ngFor="let o of this.questionInfo[this.i].options">
+                    <li class="list-group-item">
+                        <label class="font-weight-normal">
+                            <input type="radio" id="{{o.oid}}" name="options"
+                                (change)="answerSelected(o.isAnswer, o.oid)">
+                            {{o.text}}
+                        </label>
+                    </li>
+                </ul>
             </div>
+            <br>
+            <button class="btn btn-secondary btn-sm" (click)="prevQuestion()">Prev</button>
+            <div class="divider"></div>
+            <button class="btn btn-secondary btn-sm" (click)="nextQuestion()">Next</button>
+            <div class="divider"></div>
+            <button class="btn btn-success btn-sm" (click)="submit()">Submit Quiz</button>
         </div>
-        <br>
-        <button class="btn btn-primary" (click)="submit()">Submit Quiz</button>
+
+        <div *ngIf="page=='submit'">
+            <h3>Score: {{this.score}} out of 5</h3>
+            <hr>
+            <hr>
+            <div *ngFor="let q of questionInfo">
+                <div class="container">
+                    <h5>Question {{q.qid}}: {{q.question}}</h5>
+                    <ul class="list-group" *ngFor="let o of q.options">
+                        <!-- if this option is selected, highlight the box -->
+                        <div *ngIf="this.selected[q.qid - 1]==o.oid">
+                            <li class="list-group-item list-group-item-primary">
+                                <label class="font-weight-normal">{{o.text}}</label>
+                                <div class="divider"></div>
+                                <span class="badge badge-success" *ngIf="o.isAnswer==true">
+                                    Correct
+                                </span>
+                                <span class="badge badge-danger" *ngIf="o.isAnswer==false">
+                                    Incorrect
+                                </span>
+                            </li>
+                        </div>
+                        <!-- else, leave box white -->
+                        <div *ngIf="this.selected[q.qid - 1]!=o.oid">
+                            <li class="list-group-item">
+                                <label class="font-weight-normal">{{o.text}}</label>
+                                <div class="divider"></div>
+                                <span class="badge badge-success" *ngIf="o.isAnswer==true">
+                                    Correct
+                                </span>
+                                <span class="badge badge-danger" *ngIf="o.isAnswer==false">
+                                    Incorrect
+                                </span>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <hr>
+            </div>
+            <hr>
+            <button class="btn btn-primary btn-sm" (click)="tryAgain()">Try Again</button>
+        </div>
     </div>
+
+
 </main>
+
+
+<!-- <div *ngIf="this.selected[q.qid]==o.oid">
+    <li class="list-group-item list-group-item-primary">
+        <label class="font-weight-normal">{{o.text}}</label>
+        <div class="divider"></div>
+        <span class="badge badge-success" *ngIf="this.isCorrect[o.oid]!=o.isAnswer">
+            Correct
+        </span>
+        <span class="badge badge-danger" *ngIf="this.isCorrect[o.oid]==o.isAnswer">
+            Incorrect
+        </span>
+    </li>
+</div>
+<div *ngIf="this.selected[q.qid]!=o.oid">
+    <li class="list-group-item">
+        <label class="font-weight-normal">{{o.text}}</label>
+        <div class="divider"></div>
+        <span class="badge badge-success" *ngIf="this.isCorrect[o.oid]!=o.isAnswer">
+            Correct
+        </span>
+        <span class="badge badge-danger" *ngIf="this.isCorrect[o.oid]==o.isAnswer">
+            Incorrect
+        </span>
+    </li>
+</div> -->

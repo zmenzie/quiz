@@ -5,18 +5,22 @@
             "question": "Which of the following is not a fruit?",
             "options": [
                 {
+                    "oid": 1,
                     "text": "apple",
                     "isAnswer": false
                 },
                 {
+                    "oid": 2,
                     "text": "banana",
                     "isAnswer": false
                 },
                 {
+                    "oid": 3,
                     "text": "orange",
                     "isAnswer": false
                 },
                 {
+                    "oid": 4,
                     "text": "carrot",
                     "isAnswer": true
                 }
@@ -27,18 +31,22 @@
             "question": "The sun is what color?",
             "options": [
                 {
+                    "oid": 1,
                     "text": "yellow",
                     "isAnswer": true
                 },
                 {
+                    "oid": 2,
                     "text": "blue",
                     "isAnswer": false
                 },
                 {
+                    "oid": 3,
                     "text": "red",
                     "isAnswer": false
                 },
                 {
+                    "oid": 4,
                     "text": "green",
                     "isAnswer": false
                 }
@@ -49,18 +57,22 @@
             "question": "Which of the following does not fit the group?",
             "options": [
                 {
+                    "oid": 1,
                     "text": "truck",
                     "isAnswer": false
                 },
                 {
+                    "oid": 2,
                     "text": "bus",
                     "isAnswer": false
                 },
                 {
+                    "oid": 3,
                     "text": "bicycle",
                     "isAnswer": true
                 },
                 {
+                    "oid": 4,
                     "text": "tractor",
                     "isAnswer": false
                 }
@@ -71,18 +83,22 @@
             "question": "Leaves change color during which season?",
             "options": [
                 {
+                    "oid": 1,
                     "text": "Winter",
                     "isAnswer": false
                 },
                 {
+                    "oid": 2,
                     "text": "Spring",
                     "isAnswer": false
                 },
                 {
+                    "oid": 3,
                     "text": "Summer",
                     "isAnswer": false
                 },
                 {
+                    "oid": 4,
                     "text": "Fall",
                     "isAnswer": true
                 }
@@ -93,18 +109,22 @@
             "question": "Which animal is tallest?",
             "options": [
                 {
+                    "oid": 1,
                     "text": "Elephant",
                     "isAnswer": false
                 },
                 {
+                    "oid": 2,
                     "text": "Bear",
                     "isAnswer": false
                 },
                 {
+                    "oid": 3,
                     "text": "Gorilla",
                     "isAnswer": false
                 },
                 {
+                    "oid": 4,
                     "text": "Giraffe",
                     "isAnswer": true
                 }

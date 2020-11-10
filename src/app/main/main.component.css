@@ -1,0 +1,10 @@
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+
+.simple {
+    text-align: center;
+    padding-top: 50px;
+}
